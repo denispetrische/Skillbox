@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skillbox Homework 2.2 (Score Counting)", "Skillbox Homework 2.2 (Score Counting)\Skillbox Homework 2.2 (Score Counting).csproj", "{B4CE7545-E550-42F7-82B1-2B4AA10F0173}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B4CE7545-E550-42F7-82B1-2B4AA10F0173}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4CE7545-E550-42F7-82B1-2B4AA10F0173}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4CE7545-E550-42F7-82B1-2B4AA10F0173}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4CE7545-E550-42F7-82B1-2B4AA10F0173}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D60B76E6-B501-4437-BDB7-3EFDE25DC8B6}
+	EndGlobalSection
+EndGlobal

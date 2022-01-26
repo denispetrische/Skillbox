@@ -1,0 +1,14 @@
+C:\Users\LENOVO\source\repos\Skillbox Homework 2.2 (Score Counting)\Skillbox Homework 2.2 (Score Counting)\bin\Debug\netcoreapp3.1\Skillbox Homework 2.2 (Score Counting).exe
+C:\Users\LENOVO\source\repos\Skillbox Homework 2.2 (Score Counting)\Skillbox Homework 2.2 (Score Counting)\bin\Debug\netcoreapp3.1\Skillbox Homework 2.2 (Score Counting).deps.json
+C:\Users\LENOVO\source\repos\Skillbox Homework 2.2 (Score Counting)\Skillbox Homework 2.2 (Score Counting)\bin\Debug\netcoreapp3.1\Skillbox Homework 2.2 (Score Counting).runtimeconfig.json
+C:\Users\LENOVO\source\repos\Skillbox Homework 2.2 (Score Counting)\Skillbox Homework 2.2 (Score Counting)\bin\Debug\netcoreapp3.1\Skillbox Homework 2.2 (Score Counting).runtimeconfig.dev.json
+C:\Users\LENOVO\source\repos\Skillbox Homework 2.2 (Score Counting)\Skillbox Homework 2.2 (Score Counting)\bin\Debug\netcoreapp3.1\Skillbox Homework 2.2 (Score Counting).dll
+C:\Users\LENOVO\source\repos\Skillbox Homework 2.2 (Score Counting)\Skillbox Homework 2.2 (Score Counting)\bin\Debug\netcoreapp3.1\Skillbox Homework 2.2 (Score Counting).pdb
+C:\Users\LENOVO\source\repos\Skillbox Homework 2.2 (Score Counting)\Skillbox Homework 2.2 (Score Counting)\obj\Debug\netcoreapp3.1\Skillbox Homework 2.2 (Score Counting).csproj.AssemblyReference.cache
+C:\Users\LENOVO\source\repos\Skillbox Homework 2.2 (Score Counting)\Skillbox Homework 2.2 (Score Counting)\obj\Debug\netcoreapp3.1\Skillbox Homework 2.2 (Score Counting).GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LENOVO\source\repos\Skillbox Homework 2.2 (Score Counting)\Skillbox Homework 2.2 (Score Counting)\obj\Debug\netcoreapp3.1\Skillbox Homework 2.2 (Score Counting).AssemblyInfoInputs.cache
+C:\Users\LENOVO\source\repos\Skillbox Homework 2.2 (Score Counting)\Skillbox Homework 2.2 (Score Counting)\obj\Debug\netcoreapp3.1\Skillbox Homework 2.2 (Score Counting).AssemblyInfo.cs
+C:\Users\LENOVO\source\repos\Skillbox Homework 2.2 (Score Counting)\Skillbox Homework 2.2 (Score Counting)\obj\Debug\netcoreapp3.1\Skillbox Homework 2.2 (Score Counting).csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\source\repos\Skillbox Homework 2.2 (Score Counting)\Skillbox Homework 2.2 (Score Counting)\obj\Debug\netcoreapp3.1\Skillbox Homework 2.2 (Score Counting).dll
+C:\Users\LENOVO\source\repos\Skillbox Homework 2.2 (Score Counting)\Skillbox Homework 2.2 (Score Counting)\obj\Debug\netcoreapp3.1\Skillbox Homework 2.2 (Score Counting).pdb
+C:\Users\LENOVO\source\repos\Skillbox Homework 2.2 (Score Counting)\Skillbox Homework 2.2 (Score Counting)\obj\Debug\netcoreapp3.1\Skillbox Homework 2.2 (Score Counting).genruntimeconfig.cache

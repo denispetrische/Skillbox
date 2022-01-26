@@ -1,0 +1,14 @@
+C:\Users\LENOVO\source\repos\Skillbox Homework 2.1 ( Data types)\Skillbox Homework 2.1 ( Data types)\bin\Debug\netcoreapp3.1\Skillbox Homework 2.1 ( Data types).exe
+C:\Users\LENOVO\source\repos\Skillbox Homework 2.1 ( Data types)\Skillbox Homework 2.1 ( Data types)\bin\Debug\netcoreapp3.1\Skillbox Homework 2.1 ( Data types).deps.json
+C:\Users\LENOVO\source\repos\Skillbox Homework 2.1 ( Data types)\Skillbox Homework 2.1 ( Data types)\bin\Debug\netcoreapp3.1\Skillbox Homework 2.1 ( Data types).runtimeconfig.json
+C:\Users\LENOVO\source\repos\Skillbox Homework 2.1 ( Data types)\Skillbox Homework 2.1 ( Data types)\bin\Debug\netcoreapp3.1\Skillbox Homework 2.1 ( Data types).runtimeconfig.dev.json
+C:\Users\LENOVO\source\repos\Skillbox Homework 2.1 ( Data types)\Skillbox Homework 2.1 ( Data types)\bin\Debug\netcoreapp3.1\Skillbox Homework 2.1 ( Data types).dll
+C:\Users\LENOVO\source\repos\Skillbox Homework 2.1 ( Data types)\Skillbox Homework 2.1 ( Data types)\bin\Debug\netcoreapp3.1\Skillbox Homework 2.1 ( Data types).pdb
+C:\Users\LENOVO\source\repos\Skillbox Homework 2.1 ( Data types)\Skillbox Homework 2.1 ( Data types)\obj\Debug\netcoreapp3.1\Skillbox Homework 2.1 ( Data types).csproj.AssemblyReference.cache
+C:\Users\LENOVO\source\repos\Skillbox Homework 2.1 ( Data types)\Skillbox Homework 2.1 ( Data types)\obj\Debug\netcoreapp3.1\Skillbox Homework 2.1 ( Data types).GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LENOVO\source\repos\Skillbox Homework 2.1 ( Data types)\Skillbox Homework 2.1 ( Data types)\obj\Debug\netcoreapp3.1\Skillbox Homework 2.1 ( Data types).AssemblyInfoInputs.cache
+C:\Users\LENOVO\source\repos\Skillbox Homework 2.1 ( Data types)\Skillbox Homework 2.1 ( Data types)\obj\Debug\netcoreapp3.1\Skillbox Homework 2.1 ( Data types).AssemblyInfo.cs
+C:\Users\LENOVO\source\repos\Skillbox Homework 2.1 ( Data types)\Skillbox Homework 2.1 ( Data types)\obj\Debug\netcoreapp3.1\Skillbox Homework 2.1 ( Data types).csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\source\repos\Skillbox Homework 2.1 ( Data types)\Skillbox Homework 2.1 ( Data types)\obj\Debug\netcoreapp3.1\Skillbox Homework 2.1 ( Data types).dll
+C:\Users\LENOVO\source\repos\Skillbox Homework 2.1 ( Data types)\Skillbox Homework 2.1 ( Data types)\obj\Debug\netcoreapp3.1\Skillbox Homework 2.1 ( Data types).pdb
+C:\Users\LENOVO\source\repos\Skillbox Homework 2.1 ( Data types)\Skillbox Homework 2.1 ( Data types)\obj\Debug\netcoreapp3.1\Skillbox Homework 2.1 ( Data types).genruntimeconfig.cache
