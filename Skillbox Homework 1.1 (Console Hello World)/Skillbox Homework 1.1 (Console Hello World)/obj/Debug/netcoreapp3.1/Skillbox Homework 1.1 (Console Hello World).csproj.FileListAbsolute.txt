@@ -1,0 +1,13 @@
+C:\Users\LENOVO\source\repos\Skillbox Homework 1.1 (Console Hello World)\Skillbox Homework 1.1 (Console Hello World)\bin\Debug\netcoreapp3.1\Skillbox Homework 1.1 (Console Hello World).exe
+C:\Users\LENOVO\source\repos\Skillbox Homework 1.1 (Console Hello World)\Skillbox Homework 1.1 (Console Hello World)\bin\Debug\netcoreapp3.1\Skillbox Homework 1.1 (Console Hello World).deps.json
+C:\Users\LENOVO\source\repos\Skillbox Homework 1.1 (Console Hello World)\Skillbox Homework 1.1 (Console Hello World)\bin\Debug\netcoreapp3.1\Skillbox Homework 1.1 (Console Hello World).runtimeconfig.json
+C:\Users\LENOVO\source\repos\Skillbox Homework 1.1 (Console Hello World)\Skillbox Homework 1.1 (Console Hello World)\bin\Debug\netcoreapp3.1\Skillbox Homework 1.1 (Console Hello World).runtimeconfig.dev.json
+C:\Users\LENOVO\source\repos\Skillbox Homework 1.1 (Console Hello World)\Skillbox Homework 1.1 (Console Hello World)\bin\Debug\netcoreapp3.1\Skillbox Homework 1.1 (Console Hello World).dll
+C:\Users\LENOVO\source\repos\Skillbox Homework 1.1 (Console Hello World)\Skillbox Homework 1.1 (Console Hello World)\bin\Debug\netcoreapp3.1\Skillbox Homework 1.1 (Console Hello World).pdb
+C:\Users\LENOVO\source\repos\Skillbox Homework 1.1 (Console Hello World)\Skillbox Homework 1.1 (Console Hello World)\obj\Debug\netcoreapp3.1\Skillbox Homework 1.1 (Console Hello World).GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LENOVO\source\repos\Skillbox Homework 1.1 (Console Hello World)\Skillbox Homework 1.1 (Console Hello World)\obj\Debug\netcoreapp3.1\Skillbox Homework 1.1 (Console Hello World).AssemblyInfoInputs.cache
+C:\Users\LENOVO\source\repos\Skillbox Homework 1.1 (Console Hello World)\Skillbox Homework 1.1 (Console Hello World)\obj\Debug\netcoreapp3.1\Skillbox Homework 1.1 (Console Hello World).AssemblyInfo.cs
+C:\Users\LENOVO\source\repos\Skillbox Homework 1.1 (Console Hello World)\Skillbox Homework 1.1 (Console Hello World)\obj\Debug\netcoreapp3.1\Skillbox Homework 1.1 (Console Hello World).csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\source\repos\Skillbox Homework 1.1 (Console Hello World)\Skillbox Homework 1.1 (Console Hello World)\obj\Debug\netcoreapp3.1\Skillbox Homework 1.1 (Console Hello World).dll
+C:\Users\LENOVO\source\repos\Skillbox Homework 1.1 (Console Hello World)\Skillbox Homework 1.1 (Console Hello World)\obj\Debug\netcoreapp3.1\Skillbox Homework 1.1 (Console Hello World).pdb
+C:\Users\LENOVO\source\repos\Skillbox Homework 1.1 (Console Hello World)\Skillbox Homework 1.1 (Console Hello World)\obj\Debug\netcoreapp3.1\Skillbox Homework 1.1 (Console Hello World).genruntimeconfig.cache
