@@ -1,0 +1,14 @@
+C:\Users\LENOVO\source\repos\Skillbox Homework 5.1\Skillbox Homework 5.1\bin\Debug\netcoreapp3.1\Skillbox Homework 5.1.exe
+C:\Users\LENOVO\source\repos\Skillbox Homework 5.1\Skillbox Homework 5.1\bin\Debug\netcoreapp3.1\Skillbox Homework 5.1.deps.json
+C:\Users\LENOVO\source\repos\Skillbox Homework 5.1\Skillbox Homework 5.1\bin\Debug\netcoreapp3.1\Skillbox Homework 5.1.runtimeconfig.json
+C:\Users\LENOVO\source\repos\Skillbox Homework 5.1\Skillbox Homework 5.1\bin\Debug\netcoreapp3.1\Skillbox Homework 5.1.runtimeconfig.dev.json
+C:\Users\LENOVO\source\repos\Skillbox Homework 5.1\Skillbox Homework 5.1\bin\Debug\netcoreapp3.1\Skillbox Homework 5.1.dll
+C:\Users\LENOVO\source\repos\Skillbox Homework 5.1\Skillbox Homework 5.1\bin\Debug\netcoreapp3.1\Skillbox Homework 5.1.pdb
+C:\Users\LENOVO\source\repos\Skillbox Homework 5.1\Skillbox Homework 5.1\obj\Debug\netcoreapp3.1\Skillbox Homework 5.1.csproj.AssemblyReference.cache
+C:\Users\LENOVO\source\repos\Skillbox Homework 5.1\Skillbox Homework 5.1\obj\Debug\netcoreapp3.1\Skillbox Homework 5.1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LENOVO\source\repos\Skillbox Homework 5.1\Skillbox Homework 5.1\obj\Debug\netcoreapp3.1\Skillbox Homework 5.1.AssemblyInfoInputs.cache
+C:\Users\LENOVO\source\repos\Skillbox Homework 5.1\Skillbox Homework 5.1\obj\Debug\netcoreapp3.1\Skillbox Homework 5.1.AssemblyInfo.cs
+C:\Users\LENOVO\source\repos\Skillbox Homework 5.1\Skillbox Homework 5.1\obj\Debug\netcoreapp3.1\Skillbox Homework 5.1.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\source\repos\Skillbox Homework 5.1\Skillbox Homework 5.1\obj\Debug\netcoreapp3.1\Skillbox Homework 5.1.dll
+C:\Users\LENOVO\source\repos\Skillbox Homework 5.1\Skillbox Homework 5.1\obj\Debug\netcoreapp3.1\Skillbox Homework 5.1.pdb
+C:\Users\LENOVO\source\repos\Skillbox Homework 5.1\Skillbox Homework 5.1\obj\Debug\netcoreapp3.1\Skillbox Homework 5.1.genruntimeconfig.cache
