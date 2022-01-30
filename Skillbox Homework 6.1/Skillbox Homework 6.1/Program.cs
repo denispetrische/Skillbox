@@ -12,7 +12,11 @@ namespace Skillbox_Homework_6._1
             string directoryPath = "Сотрудники.txt"; // указываем путь для нашего файла 
             bool isWorking = true;
 
-            int id = GetCurrentID(directoryPath); //Считывается индекс из последней строки
+            int id = 0;
+            if (File.Exists(directoryPath))
+            {
+                id = GetID(directoryPath);
+            }
 
             while (isWorking)
             {
@@ -26,16 +30,24 @@ namespace Skillbox_Homework_6._1
                 {
                     case "1":
                         string[] temp = GetInfo(directoryPath, id);
-                        string foo = "";
-                        foreach (var line in temp)
+
+                        if (temp != null)
                         {
-                            foo = line.Replace("#", " ");
-                            Console.WriteLine($"\n{foo}");
+                            string foo = "";
+                            foreach (var line in temp)
+                            {
+                                foo = line.Replace("#", " ");
+                                Console.WriteLine($"\n{foo}");
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("\nФайл не существует, создайте его нажав кнопку 2 и записав параментры сотрудника");
                         }
                         break;
 
                     case "2":
-                        WriteInfo(directoryPath, id);
+                        WriteInfo(directoryPath, ref id);
                         break;
 
                     case "3":
@@ -57,7 +69,16 @@ namespace Skillbox_Homework_6._1
         private static string[] GetInfo(string directoryPath, int id)
         {
             string []temp = new string[id];
-            temp = File.ReadAllLines(directoryPath);
+
+            if (File.Exists(directoryPath))
+            {
+                temp = File.ReadAllLines(directoryPath);
+            }
+            else
+            {
+                temp = null;
+            }
+
             return temp;
         }
 
@@ -66,7 +87,7 @@ namespace Skillbox_Homework_6._1
         /// </summary>
         /// <param name="directoryPath">Путь к документу</param>
         /// <param name="idCounter"> ID сотрудника</param>
-        private static void WriteInfo(string directoryPath, int idCounter)
+        private static void WriteInfo(string directoryPath, ref int idCounter)
         {
             using (StreamWriter Writer = new StreamWriter(directoryPath, true, Encoding.UTF8))
             {
@@ -95,21 +116,16 @@ namespace Skillbox_Homework_6._1
 
                 Console.WriteLine("\nСотрудник успешно добавлен\n");
             }
-        }
-
-        /// <summary>
-        /// Получает ID последней строки
-        /// </summary>
-        /// <param name="path"></param>
-        /// <returns></returns>
-        private static int GetCurrentID(string path)
+        }   
+        
+        private static int GetID(string path)
         {
             int temp;
             var lastString = File.ReadLines(path).Last();
 
             if (!string.IsNullOrEmpty(lastString))
             {
-                temp = Convert.ToInt32(lastString.Substring(0,lastString.IndexOf("#")));
+                temp = Convert.ToInt32(lastString.Substring(0, lastString.IndexOf("#")));
             }
             else
             {
