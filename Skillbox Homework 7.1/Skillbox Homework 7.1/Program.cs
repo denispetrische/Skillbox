@@ -17,18 +17,18 @@ namespace Skillbox_Homework_7._1
             int whichChoosenY = 0; // координата Y для меню
             ConsoleKey pressedKey;
 
-            Buttons[] ButtonsArray = new Buttons[6];
-            Buttons[] ButtonsArraySort = new Buttons[5];
+            Buttons[] buttonsArray = new Buttons[6];
+            Buttons[] buttonsArraySort = new Buttons[5];
 
-            DataBase Workers = new DataBase(directoryPath);            
-            Workers.Load();
+            DataBase workers = new DataBase(directoryPath);            
+            workers.Load();
 
             ConsolePreset(); // настраивает размер консоли 
-            CreateMenu(ButtonsArray, ButtonsArraySort);
+            CreateMenu(buttonsArray, buttonsArraySort);
 
             while (isActive)
             {
-                UpdateMenu(ButtonsArray, ButtonsArraySort, whichChoosenX, whichChoosenY);
+                UpdateMenu(buttonsArray, buttonsArraySort, whichChoosenX, whichChoosenY);
 
                 pressedKey = Console.ReadKey().Key;
 
@@ -37,9 +37,9 @@ namespace Skillbox_Homework_7._1
                     case ConsoleKey.RightArrow:
                         whichChoosenY = 0;
                         whichChoosenX++;
-                        if (whichChoosenX >= ButtonsArray.Length)
+                        if (whichChoosenX >= buttonsArray.Length)
                         {
-                            whichChoosenX = ButtonsArray.Length - 1;
+                            whichChoosenX = buttonsArray.Length - 1;
                         }
                         break;
 
@@ -57,9 +57,9 @@ namespace Skillbox_Homework_7._1
                         {
                             whichChoosenY++;
 
-                            if (whichChoosenY >= 4)
+                            if (whichChoosenY >= 3)
                             {
-                                whichChoosenY = 4;
+                                whichChoosenY = 3;
                             }
                         }
                         break;
@@ -89,31 +89,36 @@ namespace Skillbox_Homework_7._1
                     switch (whichChoosenX)
                     {
                         case 0:
-                            Workers.ShowInfo();
+                            workers.ShowInfo();
                             Console.WriteLine("\n Для продолжения нажмите любую кнопку");
                             Console.ReadKey();
                             break;
 
                         case 1:
-                            Workers.Add();
+                            workers.Add();
                             break;
 
                         case 2:
-                            Workers.Delete();
+                            workers.Delete();
                             break;
 
                         case 3:
-                            Workers.Edit();
+                            workers.Edit();
                             break;
 
                         case 4:
-                            Workers.Sort(whichChoosenY);
+                            workers.Sort(whichChoosenY);
                             break;
 
                         case 5:
                             isActive = false;
-                            File.Delete(directoryPath);
-                            Workers.Write(directoryPath);
+
+                            if (File.Exists(directoryPath))
+                            {
+                                File.Delete(directoryPath);
+                            }
+
+                            workers.Write(directoryPath);
                             break;
                     }
 
@@ -129,26 +134,25 @@ namespace Skillbox_Homework_7._1
             Console.CursorVisible = false;
         }
 
-        static void CreateMenu(Buttons[] ButtonsArray, Buttons[] ButtonsArraySort) 
+        static void CreateMenu(Buttons[] buttonsArray, Buttons[] buttonsArraySort) 
         {
-            ButtonsArray[0] = new Buttons("Показать", 1, 1);
-            ButtonsArray[1] = new Buttons("Добавить", 10, 1);
-            ButtonsArray[2] = new Buttons("Удалить", 19, 1);
-            ButtonsArray[3] = new Buttons("Редактировать", 27, 1);
-            ButtonsArray[4] = new Buttons("Сортировать", 41, 1);
-            ButtonsArray[5] = new Buttons("Выход", 53, 1);
+            buttonsArray[0] = new Buttons("Показать", 1, 1);
+            buttonsArray[1] = new Buttons("Добавить", 10, 1);
+            buttonsArray[2] = new Buttons("Удалить", 19, 1);
+            buttonsArray[3] = new Buttons("Редактировать", 27, 1);
+            buttonsArray[4] = new Buttons("Сортировать", 41, 1);
+            buttonsArray[5] = new Buttons("Выход", 53, 1);
 
-            ButtonsArraySort[1] = new Buttons("Выбрать период времени", 43, 3);
-            ButtonsArraySort[2] = new Buttons("По дате добавления", 43, 5);
-            ButtonsArraySort[3] = new Buttons("По ID", 43, 7);
-            ButtonsArraySort[4] = new Buttons("По дате рождения", 43, 9);           
+            buttonsArraySort[1] = new Buttons("Выбрать период времени", 43, 3);
+            buttonsArraySort[2] = new Buttons("По дате добавления", 43, 5);
+            buttonsArraySort[3] = new Buttons("По дате рождения", 43, 7);           
         }
 
-        static void UpdateMenu(Buttons[] ButtonsArray, Buttons[] ButtonsArraySort, int whichChoosenX, int whichChoosenY)
+        static void UpdateMenu(Buttons[] buttonsArray, Buttons[] buttonsArraySort, int whichChoosenX, int whichChoosenY)
         {
             Console.Clear();
 
-            for (int i = 0; i < ButtonsArray.Length; i++)
+            for (int i = 0; i < buttonsArray.Length; i++)
             {
                 if (i == whichChoosenX)
                 {
@@ -156,22 +160,22 @@ namespace Skillbox_Homework_7._1
                     {
                         if (whichChoosenY > 0)
                         {
-                            Console.SetCursorPosition(ButtonsArray[4].PositionX, ButtonsArray[4].PositionY);
-                            Console.Write(ButtonsArray[4].Text);
+                            Console.SetCursorPosition(buttonsArray[4].PositionX, buttonsArray[4].PositionY);
+                            Console.Write(buttonsArray[4].Text);
 
-                            for (int j = 1; j < ButtonsArraySort.Length; j++)
+                            for (int j = 1; j < buttonsArraySort.Length; j++)
                             {
                                 if (j == whichChoosenY)
                                 {
                                     Console.ForegroundColor = ConsoleColor.Yellow;
-                                    Console.SetCursorPosition(ButtonsArraySort[j].PositionX, ButtonsArraySort[j].PositionY);
-                                    Console.Write(ButtonsArraySort[j].Text);
+                                    Console.SetCursorPosition(buttonsArraySort[j].PositionX, buttonsArraySort[j].PositionY);
+                                    Console.Write(buttonsArraySort[j].Text);
                                     Console.ForegroundColor = ConsoleColor.White;
                                 }
                                 else
                                 {
-                                    Console.SetCursorPosition(ButtonsArraySort[j].PositionX, ButtonsArraySort[j].PositionY);
-                                    Console.Write(ButtonsArraySort[j].Text);
+                                    Console.SetCursorPosition(buttonsArraySort[j].PositionX, buttonsArraySort[j].PositionY);
+                                    Console.Write(buttonsArraySort[j].Text);
                                 }
 
                             }
@@ -179,29 +183,29 @@ namespace Skillbox_Homework_7._1
                         else
                         {
                             Console.ForegroundColor = ConsoleColor.Yellow;
-                            Console.SetCursorPosition(ButtonsArray[4].PositionX, ButtonsArray[4].PositionY);
-                            Console.Write(ButtonsArray[4].Text);
+                            Console.SetCursorPosition(buttonsArray[4].PositionX, buttonsArray[4].PositionY);
+                            Console.Write(buttonsArray[4].Text);
                             Console.ForegroundColor = ConsoleColor.White;
 
-                            for (int j = 1; j < ButtonsArraySort.Length; j++)
+                            for (int j = 1; j < buttonsArraySort.Length; j++)
                             {
-                                Console.SetCursorPosition(ButtonsArraySort[j].PositionX, ButtonsArraySort[j].PositionY);
-                                Console.Write(ButtonsArraySort[j].Text);
+                                Console.SetCursorPosition(buttonsArraySort[j].PositionX, buttonsArraySort[j].PositionY);
+                                Console.Write(buttonsArraySort[j].Text);
                             }
                         }           
                     }
                     else
                     {
                         Console.ForegroundColor = ConsoleColor.Yellow;
-                        Console.SetCursorPosition(ButtonsArray[i].PositionX, ButtonsArray[i].PositionY);
-                        Console.Write(ButtonsArray[i].Text);
+                        Console.SetCursorPosition(buttonsArray[i].PositionX, buttonsArray[i].PositionY);
+                        Console.Write(buttonsArray[i].Text);
                         Console.ForegroundColor = ConsoleColor.White;
                     }
                 }
                 else
                 {
-                    Console.SetCursorPosition(ButtonsArray[i].PositionX, ButtonsArray[i].PositionY);
-                    Console.Write(ButtonsArray[i].Text);
+                    Console.SetCursorPosition(buttonsArray[i].PositionX, buttonsArray[i].PositionY);
+                    Console.Write(buttonsArray[i].Text);
                 }
             }
         }

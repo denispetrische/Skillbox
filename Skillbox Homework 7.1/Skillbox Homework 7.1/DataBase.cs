@@ -39,24 +39,18 @@ namespace Skillbox_Homework_7._1
             {
                 string[] allStrings;
                 string[] substrings = new string[7];
+                int counter = 1;
 
                 allStrings = File.ReadAllLines(path);
 
-                if (allStrings.Length > 1)
+                foreach (var line in allStrings)
                 {
-                    foreach (var line in allStrings)
-                    {
-                        substrings = line.Split('#');
-                        Person LoadedWorker = new Person(Convert.ToInt32(substrings[0]), substrings[1], substrings[2], substrings[3], substrings[4], substrings[5], substrings[6]);
-                        FirstAdd(LoadedWorker, Convert.ToInt32(substrings[0]));
-                    }
-
-                    index = FreeID();
+                    substrings = line.Split('#');
+                    Person loadedWorker = new Person(counter, substrings[1], substrings[2], substrings[3], substrings[4], substrings[5], substrings[6]);
+                    Base[counter++] = loadedWorker;
                 }
-            }
-            else
-            {
-                File.Create(path);
+
+                index = counter - 1;         
             }
         }
 
@@ -85,21 +79,8 @@ namespace Skillbox_Homework_7._1
 
             Base[index] = Worker;
 
-            index = FreeID();
-
             Console.WriteLine("\n Сотрудник успешно добавлен. Нажмите любую кнопку для продолжения");
             Console.ReadKey();
-        }
-
-        /// <summary>
-        /// Метод для добавления элементов в массив при считывании из файла ( чтобы положение в массиве было равно id) 
-        /// </summary>
-        /// <param name="Worker"></param>
-        /// <param name="id"></param>
-        public void FirstAdd(Person Worker, int id)
-        {
-            this.ExpandBase(id >= this.Base.Length);
-            this.Base[id] = Worker;
         }
 
         public void Delete()
@@ -107,8 +88,9 @@ namespace Skillbox_Homework_7._1
             Console.Clear();
             Console.WriteLine("Введите ID работника, которого желаете удалить");
             int id = Convert.ToInt32(Console.ReadLine());
-
             bool isExist = false;
+            int nextNumber = 0;
+            int previousNumber = 0;
 
             foreach (var number in Base)
             {
@@ -125,7 +107,30 @@ namespace Skillbox_Homework_7._1
             }
             else
             {
+                int baseLength = 0;
+
+                foreach (var item in Base)
+                {
+                    if (item.id != 0)
+                    {
+                        baseLength++;
+                    }
+                }
+
                 Base[id].id = 0; // присваеваем не свой индекс удаляемой строке в базе чтобы перезаписать её в будущем               
+                nextNumber = id + 1;
+                previousNumber = id;
+
+                for (int i = previousNumber; i < baseLength - 1; i++)
+                {
+                    Base[previousNumber] = Base[nextNumber];
+                    Base[previousNumber].id = previousNumber;
+                    nextNumber++;
+                    previousNumber++;
+                }
+
+                Base[baseLength].id = 0;
+                index--;
 
                 Console.WriteLine("Удалено, нажмите любую клавишу для продолжения");
                 Console.ReadKey();           
@@ -140,9 +145,21 @@ namespace Skillbox_Homework_7._1
 
             if (int.TryParse(Console.ReadLine(), out id))
             {
-                index = Base[id].id - 1;
-                Base[id].id = 0;
-                Add();
+                Console.Clear();
+                Console.WriteLine("Введите ФИО работника:");
+                Base[id].name = Console.ReadLine();
+
+                Console.WriteLine("Введите возраст работника:");
+                Base[id].age = Console.ReadLine();
+
+                Console.WriteLine("Введите рост работника:");
+                Base[id].height = Console.ReadLine();
+
+                Console.WriteLine("Введите дату рождения работника:");
+                Base[id].birthday = Console.ReadLine();
+
+                Console.WriteLine("Введите место рождения работника:");
+                Base[id].birthPlace = Console.ReadLine();
             }
             else
             {
@@ -200,31 +217,6 @@ namespace Skillbox_Homework_7._1
                 }
         }
 
-        public int FreeID()
-        {
-            bool isFree = false;
-            int idValue = 0;
-
-            for (int i = 1; i <= Base.Length - 1; i++)
-            {
-                if (i != Base[i].id)
-                {
-                    isFree = true;
-                    idValue = i;
-                    break;
-                }
-            }
-
-            if (isFree)
-            {
-                return idValue - 1;
-            }
-            else
-            {
-                return Base.Length - 1;
-            }
-        }
-
         public void Sort(int whichSort)
         {
             switch (whichSort)
@@ -240,10 +232,6 @@ namespace Skillbox_Homework_7._1
                     break;
 
                 case 3:
-                    SortID();                   
-                    break;
-
-                case 4:
                     SortBirthday();
                     break;
 
@@ -418,43 +406,6 @@ namespace Skillbox_Homework_7._1
                               $"{finalArray[i].birthPlace,21}");
                 }
             }
-        }
-
-        private void SortID()
-        {
-            int[] sortedIndex = new int[Base.Length - 1];
-            int counter = 0;
-
-            foreach (var item in Base)
-            {
-                if (item.id != 0)
-                {
-                    sortedIndex[counter++] = item.id;
-                }
-            }
-
-            Array.Sort(sortedIndex);
-
-            counter = 0;
-
-            Person[] sorted = new Person[Base.Length - 1];
-
-            for (int i = 0; i < sortedIndex.Length; i++)
-            {
-                if (sortedIndex[i] != 0)
-                {
-                    sorted[counter++] = Base[i];
-                }
-            }
-
-            for (int i = 1; i < sorted.Length; i++)
-            {
-                Base[i] = sorted[i - 1];
-            }
-
-            Console.Clear();
-            Console.WriteLine("\nВыполнено, нажмите любую кнопку для продолжения");
-            Console.ReadKey();
         }
 
         private void SortBirthday()
