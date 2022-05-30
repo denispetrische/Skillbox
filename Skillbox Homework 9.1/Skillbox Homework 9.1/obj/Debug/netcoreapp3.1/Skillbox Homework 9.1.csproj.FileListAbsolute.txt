@@ -1,0 +1,23 @@
+C:\Users\LENOVO\source\repos\Skillbox Homework 9.1\Skillbox Homework 9.1\bin\Debug\netcoreapp3.1\Skillbox Homework 9.1.exe
+C:\Users\LENOVO\source\repos\Skillbox Homework 9.1\Skillbox Homework 9.1\bin\Debug\netcoreapp3.1\Skillbox Homework 9.1.deps.json
+C:\Users\LENOVO\source\repos\Skillbox Homework 9.1\Skillbox Homework 9.1\bin\Debug\netcoreapp3.1\Skillbox Homework 9.1.runtimeconfig.json
+C:\Users\LENOVO\source\repos\Skillbox Homework 9.1\Skillbox Homework 9.1\bin\Debug\netcoreapp3.1\Skillbox Homework 9.1.runtimeconfig.dev.json
+C:\Users\LENOVO\source\repos\Skillbox Homework 9.1\Skillbox Homework 9.1\bin\Debug\netcoreapp3.1\Skillbox Homework 9.1.dll
+C:\Users\LENOVO\source\repos\Skillbox Homework 9.1\Skillbox Homework 9.1\bin\Debug\netcoreapp3.1\Skillbox Homework 9.1.pdb
+C:\Users\LENOVO\source\repos\Skillbox Homework 9.1\Skillbox Homework 9.1\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\LENOVO\source\repos\Skillbox Homework 9.1\Skillbox Homework 9.1\obj\Debug\netcoreapp3.1\Skillbox Homework 9.1.csproj.AssemblyReference.cache
+C:\Users\LENOVO\source\repos\Skillbox Homework 9.1\Skillbox Homework 9.1\obj\Debug\netcoreapp3.1\Skillbox Homework 9.1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LENOVO\source\repos\Skillbox Homework 9.1\Skillbox Homework 9.1\obj\Debug\netcoreapp3.1\Skillbox Homework 9.1.AssemblyInfoInputs.cache
+C:\Users\LENOVO\source\repos\Skillbox Homework 9.1\Skillbox Homework 9.1\obj\Debug\netcoreapp3.1\Skillbox Homework 9.1.AssemblyInfo.cs
+C:\Users\LENOVO\source\repos\Skillbox Homework 9.1\Skillbox Homework 9.1\obj\Debug\netcoreapp3.1\Skillbox Homework 9.1.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\source\repos\Skillbox Homework 9.1\Skillbox Homework 9.1\obj\Debug\netcoreapp3.1\Skillbox Homework 9.1.dll
+C:\Users\LENOVO\source\repos\Skillbox Homework 9.1\Skillbox Homework 9.1\obj\Debug\netcoreapp3.1\Skillbox Homework 9.1.pdb
+C:\Users\LENOVO\source\repos\Skillbox Homework 9.1\Skillbox Homework 9.1\obj\Debug\netcoreapp3.1\Skillbox Homework 9.1.genruntimeconfig.cache
+C:\Users\LENOVO\source\repos\Skillbox Homework 9.1\Skillbox Homework 9.1\bin\Debug\netcoreapp3.1\HtmlAgilityPack.dll
+C:\Users\LENOVO\source\repos\Skillbox Homework 9.1\Skillbox Homework 9.1\bin\Debug\netcoreapp3.1\Aspose.HTML.dll
+C:\Users\LENOVO\source\repos\Skillbox Homework 9.1\Skillbox Homework 9.1\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+C:\Users\LENOVO\source\repos\Skillbox Homework 9.1\Skillbox Homework 9.1\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
+C:\Users\LENOVO\source\repos\Skillbox Homework 9.1\Skillbox Homework 9.1\bin\Debug\netcoreapp3.1\System.Security.Permissions.dll
+C:\Users\LENOVO\source\repos\Skillbox Homework 9.1\Skillbox Homework 9.1\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\LENOVO\source\repos\Skillbox Homework 9.1\Skillbox Homework 9.1\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Drawing.Common.dll
+C:\Users\LENOVO\source\repos\Skillbox Homework 9.1\Skillbox Homework 9.1\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Drawing.Common.dll
