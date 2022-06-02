@@ -1,0 +1,24 @@
+C:\Users\LENOVO\source\repos\Skillbox Homework 10.1\Skillbox Homework 10.1\bin\Debug\netcoreapp3.1\Skillbox Homework 10.1.exe
+C:\Users\LENOVO\source\repos\Skillbox Homework 10.1\Skillbox Homework 10.1\bin\Debug\netcoreapp3.1\Skillbox Homework 10.1.deps.json
+C:\Users\LENOVO\source\repos\Skillbox Homework 10.1\Skillbox Homework 10.1\bin\Debug\netcoreapp3.1\Skillbox Homework 10.1.runtimeconfig.json
+C:\Users\LENOVO\source\repos\Skillbox Homework 10.1\Skillbox Homework 10.1\bin\Debug\netcoreapp3.1\Skillbox Homework 10.1.runtimeconfig.dev.json
+C:\Users\LENOVO\source\repos\Skillbox Homework 10.1\Skillbox Homework 10.1\bin\Debug\netcoreapp3.1\Skillbox Homework 10.1.dll
+C:\Users\LENOVO\source\repos\Skillbox Homework 10.1\Skillbox Homework 10.1\bin\Debug\netcoreapp3.1\Skillbox Homework 10.1.pdb
+C:\Users\LENOVO\source\repos\Skillbox Homework 10.1\Skillbox Homework 10.1\obj\Debug\netcoreapp3.1\Skillbox Homework 10.1.csproj.AssemblyReference.cache
+C:\Users\LENOVO\source\repos\Skillbox Homework 10.1\Skillbox Homework 10.1\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\Users\LENOVO\source\repos\Skillbox Homework 10.1\Skillbox Homework 10.1\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\LENOVO\source\repos\Skillbox Homework 10.1\Skillbox Homework 10.1\obj\Debug\netcoreapp3.1\Skillbox Homework 10.1_MarkupCompile.cache
+C:\Users\LENOVO\source\repos\Skillbox Homework 10.1\Skillbox Homework 10.1\obj\Debug\netcoreapp3.1\Skillbox Homework 10.1_MarkupCompile.lref
+C:\Users\LENOVO\source\repos\Skillbox Homework 10.1\Skillbox Homework 10.1\obj\Debug\netcoreapp3.1\MainWindow.baml
+C:\Users\LENOVO\source\repos\Skillbox Homework 10.1\Skillbox Homework 10.1\obj\Debug\netcoreapp3.1\Skillbox Homework 10.1.g.resources
+C:\Users\LENOVO\source\repos\Skillbox Homework 10.1\Skillbox Homework 10.1\obj\Debug\netcoreapp3.1\Skillbox Homework 10.1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LENOVO\source\repos\Skillbox Homework 10.1\Skillbox Homework 10.1\obj\Debug\netcoreapp3.1\Skillbox Homework 10.1.AssemblyInfoInputs.cache
+C:\Users\LENOVO\source\repos\Skillbox Homework 10.1\Skillbox Homework 10.1\obj\Debug\netcoreapp3.1\Skillbox Homework 10.1.AssemblyInfo.cs
+C:\Users\LENOVO\source\repos\Skillbox Homework 10.1\Skillbox Homework 10.1\obj\Debug\netcoreapp3.1\Skillbox Homework 10.1.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\source\repos\Skillbox Homework 10.1\Skillbox Homework 10.1\obj\Debug\netcoreapp3.1\Skillbox Homework 10.1.dll
+C:\Users\LENOVO\source\repos\Skillbox Homework 10.1\Skillbox Homework 10.1\obj\Debug\netcoreapp3.1\Skillbox Homework 10.1.pdb
+C:\Users\LENOVO\source\repos\Skillbox Homework 10.1\Skillbox Homework 10.1\obj\Debug\netcoreapp3.1\Skillbox Homework 10.1.genruntimeconfig.cache
+C:\Users\LENOVO\source\repos\Skillbox Homework 10.1\Skillbox Homework 10.1\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\LENOVO\source\repos\Skillbox Homework 10.1\Skillbox Homework 10.1\bin\Debug\netcoreapp3.1\System.Threading.Channels.dll
+C:\Users\LENOVO\source\repos\Skillbox Homework 10.1\Skillbox Homework 10.1\bin\Debug\netcoreapp3.1\Telegram.Bot.dll
+C:\Users\LENOVO\source\repos\Skillbox Homework 10.1\Skillbox Homework 10.1\bin\Debug\netcoreapp3.1\Telegram.Bot.Extensions.Polling.dll
