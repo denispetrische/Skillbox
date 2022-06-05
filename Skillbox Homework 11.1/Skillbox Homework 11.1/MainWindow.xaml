@@ -52,9 +52,10 @@
         <Button x:Name="buttonAdd" Content="Добавить" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,26,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2" Width="85" Click="ButtonAdd"/>
         <Button x:Name="buttonDelete" Content="Удалить" Grid.Column="2" HorizontalAlignment="Left" Margin="20,25,0,0" Grid.RowSpan="2" Grid.Row="1" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="85" Click="ButtonDelete"/>
         <Button x:Name="buttonEdit" Content="Редактировать" Grid.Column="2" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Margin="20,25,0,0" Grid.RowSpan="2" Grid.ColumnSpan="2" Click="ButtonEdit"/>
-        <Button x:Name="buttolLogIn" Content="Войти" Grid.Column="3" HorizontalAlignment="Left" Margin="125,25,0,0" Grid.Row="2" VerticalAlignment="Top" Click="ButtonLogIn" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
-        <RadioButton GroupName="Users" x:Name="radioButtonAdviser" Content="Консультант" Grid.Column="3" HorizontalAlignment="Left" Margin="125,26,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
-        <RadioButton x:Name="radioButtonLogOut" GroupName="Users" Content="Log Out" Grid.Column="3" HorizontalAlignment="Left" Margin="125,25,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <Button x:Name="buttolLogIn" Content="Войти" Grid.Column="3" HorizontalAlignment="Left" Margin="125,25,0,0" Grid.Row="3" VerticalAlignment="Top" Click="ButtonLogIn" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <RadioButton GroupName="Users" x:Name="radioButtonAdviser" Content="Консультант" Grid.Column="3" HorizontalAlignment="Left" Margin="125,25,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.RowSpan="2" Grid.Row="1"/>
+        <RadioButton x:Name="radioButtonLogOut" GroupName="Users" Content="Log Out" Grid.Column="3" HorizontalAlignment="Left" Margin="125,25,0,0" Grid.Row="2" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <RadioButton x:Name="radioButtonManager" GroupName="Users" Content="Менеджер" Grid.Column="3" HorizontalAlignment="Left" Margin="125,26,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
         <TextBlock x:Name="textBlock" Grid.Column="4" HorizontalAlignment="Center" Grid.Row="5" TextWrapping="Wrap" VerticalAlignment="Center" Width="106" Height="21"/>
         <Button Content="Button" Grid.Column="1" HorizontalAlignment="Left" Height="0" Margin="165,20,0,0" Grid.Row="5" VerticalAlignment="Top"/>
         <DockPanel Grid.Column="1" LastChildFill="True" Grid.Row="5" Height="20">

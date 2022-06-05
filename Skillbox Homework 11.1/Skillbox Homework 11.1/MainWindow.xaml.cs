@@ -1,22 +1,10 @@
 ﻿using Microsoft.Win32;
 using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
 using System.IO;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+
 
 
 namespace Skillbox_Homework_11._1
@@ -28,6 +16,8 @@ namespace Skillbox_Homework_11._1
 
         User user = new Undefined();
         AddDialog addEditDialog = new AddDialog();
+
+        bool isButtonAddPressed = false;
 
         public MainWindow()
         {
@@ -75,10 +65,14 @@ namespace Skillbox_Homework_11._1
 
                     var json = JsonConvert.DeserializeObject<ObservableCollection<Data>>(foo);
 
+                    Data.OverridePetrmissions(true);
+
                     foreach (dynamic item in json)
                     {
                         database.Add(new Data(item.SecondName, item.FirstName, item.Patronymic, item.PhoneNumber, item.Passport));
                     }
+
+                    Data.OverridePetrmissions(false);
 
                     VisibleInformation();
                 }
@@ -98,22 +92,49 @@ namespace Skillbox_Homework_11._1
 
         private void ButtonHelp(object sender, RoutedEventArgs e)
         {
-
+            statusBar.Text = "Функция не реализована, помощи не будет ))";
         }
 
         private void ButtonAdd(object sender, RoutedEventArgs e)
         {
+            if (user.GetType() == typeof(Manager))
+            {
+                isButtonAddPressed = true;
+                addEditDialog = new AddDialog();
+                addEditDialog.buttonAccept.Click += new RoutedEventHandler(ButtonAccept);
 
+                addEditDialog.textboxSecondName.Text = "";
+                addEditDialog.textboxFirstName.Text = "";
+                addEditDialog.textboxPatronymic.Text = "";
+                addEditDialog.textboxPhoneNumber.Text = "";
+                addEditDialog.textboxPassport.Text = "";
+
+                addEditDialog.Show();
+            }
+            else
+            {
+                statusBar.Text = "У вас нет доступа к этой функции";
+            }
         }
 
         private void ButtonDelete(object sender, RoutedEventArgs e)
         {
+            if (user.GetType() == typeof(Manager))
+            {
+                database.Remove(database[listView.SelectedIndex]);
+                statusBar.Text = "Запись удалена";
 
+                VisibleInformation();
+            }
+            else
+            {
+                statusBar.Text = "У вас нет доступа к этой функции";
+            }
         }
 
         private void ButtonEdit(object sender, RoutedEventArgs e)
         {           
-            if (listView.SelectedItem != null)
+            if (listView.SelectedItem != null && user.GetType() != typeof(Undefined))
             {
                 addEditDialog = new AddDialog();
                 addEditDialog.buttonAccept.Click += new RoutedEventHandler(ButtonAccept);
@@ -128,21 +149,43 @@ namespace Skillbox_Homework_11._1
 
                 addEditDialog.Show();
             }
+            else
+            {
+                if (user.GetType() == typeof(Undefined))
+                {
+                    statusBar.Text = "Авторизуйтесь для доступа к этой фукции";
+                }
+                else
+                {
+                    statusBar.Text = "Выберите элемент, кликнув по нему левой кнопкой мыши";
+                }
+            }
         }
 
         private void ButtonLogIn(object sender, RoutedEventArgs e)
         {
+            if (Convert.ToBoolean(radioButtonManager.IsChecked))
+            {
+                textBlock.Text = "Менеджер";
+                user = new Manager();
+                Data.GetPermissions(user);
+                statusBar.Text = "Вход выполнен как <Менеджер>";
+            }
+
             if (Convert.ToBoolean(radioButtonAdviser.IsChecked))
             {
                 textBlock.Text = "Консультант";
                 user = new Advisor();
                 Data.GetPermissions(user);
+                statusBar.Text = "Вход выполнен как <Консультант>";
             }
+
             if (Convert.ToBoolean(radioButtonLogOut.IsChecked))
             {
                 textBlock.Text = "Вход не выполнен";
                 user = new Undefined();
                 Data.GetPermissions(user);
+                statusBar.Text = "Выполнен выход";
             }
 
             VisibleInformation();
@@ -160,19 +203,64 @@ namespace Skillbox_Homework_11._1
 
         private void ButtonAccept(object sender, RoutedEventArgs e)
         {
-            if (addEditDialog.textboxPhoneNumber.Text == "")
-            {
-                addEditDialog.textboxPhoneNumber.Text = database[listView.SelectedIndex].PhoneNumber;
-            }
+            string text;            
 
-            database[listView.SelectedIndex].Edit(addEditDialog.textboxSecondName.Text,
-                                                  addEditDialog.textboxFirstName.Text,
-                                                  addEditDialog.textboxPatronymic.Text,
-                                                  addEditDialog.textboxPhoneNumber.Text,
-                                                  addEditDialog.textboxPassport.Text);
+            if (isButtonAddPressed)
+            {
+                if (addEditDialog.textboxSecondName.Text == ""
+                   || addEditDialog.textboxFirstName.Text == ""
+                   || addEditDialog.textboxPatronymic.Text == ""
+                   || addEditDialog.textboxPhoneNumber.Text == ""
+                   || addEditDialog.textboxPassport.Text == "")
+                {
+                    text = "Элемент не добавлен, одно или несколько полей пустые";
+                }
+                else
+                {
+                    database.Add(new Data(addEditDialog.textboxSecondName.Text,
+                                          addEditDialog.textboxFirstName.Text,
+                                          addEditDialog.textboxPatronymic.Text,
+                                          addEditDialog.textboxPhoneNumber.Text,
+                                          addEditDialog.textboxPassport.Text));
+
+                    text = "Элемент добавлен";
+                }
+
+                isButtonAddPressed = false;
+            }
+            else
+            {
+                if (addEditDialog.textboxSecondName.Text == ""
+                   || addEditDialog.textboxFirstName.Text == ""
+                   || addEditDialog.textboxPatronymic.Text == ""
+                   || addEditDialog.textboxPhoneNumber.Text == ""
+                   || addEditDialog.textboxPassport.Text == "")
+                {
+                    Data.OverridePetrmissions(true);
+                    addEditDialog.textboxSecondName.Text = database[listView.SelectedIndex].SecondName;
+                    addEditDialog.textboxFirstName.Text = database[listView.SelectedIndex].FirstName;
+                    addEditDialog.textboxPatronymic.Text = database[listView.SelectedIndex].Patronymic;
+                    addEditDialog.textboxPhoneNumber.Text = database[listView.SelectedIndex].PhoneNumber;
+                    addEditDialog.textboxPassport.Text = database[listView.SelectedIndex].Passport;
+                    Data.OverridePetrmissions(false);
+
+                    text = "Некоторые поля пусты, изменения не приняты";
+                }
+                else
+                {
+                    text = "Элемент отредактирован";
+                }
+
+                database[listView.SelectedIndex].Edit(addEditDialog.textboxSecondName.Text,
+                                                      addEditDialog.textboxFirstName.Text,
+                                                      addEditDialog.textboxPatronymic.Text,
+                                                      addEditDialog.textboxPhoneNumber.Text,
+                                                      addEditDialog.textboxPassport.Text);
+            }
 
             VisibleInformation();
             addEditDialog.Hide();
+            statusBar.Text = text;
         }
     }
 }
