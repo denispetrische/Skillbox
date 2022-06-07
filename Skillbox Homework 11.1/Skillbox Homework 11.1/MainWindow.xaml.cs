@@ -87,7 +87,7 @@ namespace Skillbox_Homework_11._1
 
         private void ButtonExit(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            Application.Current.Shutdown();
         }
 
         private void ButtonHelp(object sender, RoutedEventArgs e)
@@ -96,7 +96,7 @@ namespace Skillbox_Homework_11._1
         }
 
         private void ButtonAdd(object sender, RoutedEventArgs e)
-        {
+        { 
             if (user.GetType() == typeof(Manager))
             {
                 isButtonAddPressed = true;
@@ -197,7 +197,7 @@ namespace Skillbox_Homework_11._1
 
             foreach (var item in database)
             {
-                visibleDatabase.Add(new Data(item.SecondName, item.FirstName, item.Patronymic, item.PhoneNumber, item.Passport));
+                visibleDatabase.Add(new Data(item.SecondName, item.FirstName, item.Patronymic, item.PhoneNumber, item.Passport, item.Time, item.WhatChanged, item.ChangeType, item.WhoChanged));
             }
         }
 
@@ -255,7 +255,7 @@ namespace Skillbox_Homework_11._1
                                                       addEditDialog.textboxFirstName.Text,
                                                       addEditDialog.textboxPatronymic.Text,
                                                       addEditDialog.textboxPhoneNumber.Text,
-                                                      addEditDialog.textboxPassport.Text);
+                                                      addEditDialog.textboxPassport.Text, user);
             }
 
             VisibleInformation();

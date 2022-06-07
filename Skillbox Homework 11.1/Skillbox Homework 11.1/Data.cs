@@ -8,7 +8,7 @@ using System.Collections.ObjectModel;
 
 namespace Skillbox_Homework_11._1
 {
-    class Data
+    class Data : IChangeInfo
     {
         private string secondName;
         private string firstName;
@@ -28,6 +28,13 @@ namespace Skillbox_Homework_11._1
         private static bool passportPermissionWrite;
 
         private static bool overrideFlag;
+
+        public string Time { get; set; }
+        public string WhatChanged { get; set; }
+
+        public string ChangeType { get; set; }
+
+        public string WhoChanged { get; set; }
 
         public string SecondName
         {
@@ -145,7 +152,26 @@ namespace Skillbox_Homework_11._1
             this.firstName = firstName;
             this.patronymic = patronymic;
             this.phoneNumber = phoneNumber;
-            this.passport = passport;           
+            this.passport = passport;            
+            ClearChangeProps();
+        }
+
+        public Data(string secondName, string firstName, string patronymic, string phoneNumber, string passport, string Time, string WhatChanged, string ChangeType, string WhoChanged)
+        {
+            this.secondName = secondName;
+            this.firstName = firstName;
+            this.patronymic = patronymic;
+            this.phoneNumber = phoneNumber;
+            this.passport = passport;
+            this.Time = Time;
+            this.WhatChanged = WhatChanged;
+            this.ChangeType = ChangeType;
+            this.WhoChanged = WhoChanged;
+        }
+
+        public Data()
+        {
+
         }
 
         public static void GetPermissions(User user)
@@ -162,8 +188,9 @@ namespace Skillbox_Homework_11._1
             passportPermissionWrite = user.isPassportPermittedWrite;
         }
 
-        public void Edit(string secondName, string firstName, string patronymic, string phoneNumber, string passport)
+        public void Edit(string secondName, string firstName, string patronymic, string phoneNumber, string passport, User user)
         {
+            Change(secondName, firstName, patronymic, phoneNumber, passport, user);
             this.SecondName = secondName;
             this.FirstName = firstName;
             this.Patronymic = patronymic;
@@ -174,6 +201,57 @@ namespace Skillbox_Homework_11._1
         public static void OverridePetrmissions(bool boolValue)
         {
             overrideFlag = boolValue;
+        }
+
+        public void Change(string secondName, string firstName, string patronymic, string phoneNumber, string passport, User user)
+        {
+            ClearChangeProps();
+
+            Time = $"{DateTime.Now}";
+
+            if (SecondName != secondName)
+            {
+                WhatChanged += "SecondName";
+            }
+
+            if (FirstName != firstName)
+            {
+                WhatChanged += " FirstName";
+            }
+
+            if (Patronymic != patronymic)
+            {
+                WhatChanged += " Patronymic";
+            }
+
+            if (PhoneNumber != phoneNumber)
+            {
+                WhatChanged += " PhoneNumber";
+            }
+
+            if (Passport != passport)
+            {
+                WhatChanged += "Passport";
+            }
+
+            ChangeType += "Edit";
+
+            if (user.GetType() == typeof(Manager))
+            {
+                WhoChanged += "Manager";
+            }
+            else
+            {
+                WhoChanged += "Advisor";
+            }
+        }
+
+        private void ClearChangeProps()
+        {
+            Time = "";
+            WhatChanged = "";
+            ChangeType = "";
+            WhoChanged = "";
         }
     }
 }

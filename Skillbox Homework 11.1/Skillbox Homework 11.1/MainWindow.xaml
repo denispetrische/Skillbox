@@ -41,11 +41,15 @@
         <ListView x:Name="listView" Grid.Column="1" Margin="0,26,0,10" Grid.RowSpan="5" SelectedItem="{}">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Фамилия" DisplayMemberBinding="{Binding SecondName}" Width="90"/>
-                    <GridViewColumn Header="Имя" DisplayMemberBinding="{Binding FirstName}" Width="60"/>
-                    <GridViewColumn Header="Отчество" DisplayMemberBinding="{Binding Patronymic}" Width="120"/>
-                    <GridViewColumn Header="Номер телефона" DisplayMemberBinding="{Binding PhoneNumber}" Width="120"/>
-                    <GridViewColumn Header="Серия и номер паспорта" DisplayMemberBinding="{Binding Passport}" Width="120"/>
+                    <GridViewColumn Header="Фамилия" DisplayMemberBinding="{Binding SecondName}" Width="70"/>
+                    <GridViewColumn Header="Имя" DisplayMemberBinding="{Binding FirstName}" Width="50"/>
+                    <GridViewColumn Header="Отчество" DisplayMemberBinding="{Binding Patronymic}" Width="80"/>
+                    <GridViewColumn Header="Номер телефона" DisplayMemberBinding="{Binding PhoneNumber}" Width="80"/>
+                    <GridViewColumn Header="Серия и номер паспорта" DisplayMemberBinding="{Binding Passport}" Width="80"/>
+                    <GridViewColumn Header="Время изменения" DisplayMemberBinding="{Binding Time}" Width="50"/>
+                    <GridViewColumn Header="Изменения" DisplayMemberBinding="{Binding WhatChanged}" Width="50"/>
+                    <GridViewColumn Header="Тип изменения" DisplayMemberBinding="{Binding ChangeType}" Width="50"/>
+                    <GridViewColumn Header="Кто изменил" DisplayMemberBinding="{Binding WhoChanged}" Width="50"/>
                 </GridView>
             </ListView.View>
         </ListView>
