@@ -174,23 +174,23 @@ namespace Skillbox_Homework_11._1
 
         }
 
-        public static void GetPermissions(User user)
+        public static void GetPermissions(ref User user)
         {
-            secondNamePermissionRead = user.isSecondNamePermittedRead;
-            secondNamePermissionWrite = user.isSecondNamePermittedWrite;
-            firstNamePermissionRead = user.isFirstNamePermittedRead;
-            firstNamePermissionWrite = user.isFirstNamePermittedWrite;
-            patronymicPermissionRead = user.isPatronymicPermittedRead;
-            patronymicPermissionWrite = user.isPatronymicPermittedWrite;
-            phoneNumberPermissionRead = user.isPhoneNumberPermittedRead;
-            phoneNumberPermissionWrite = user.isPhoneNumberPermittedWrite;
-            passportPermissionRead = user.isPassportPermittedRead;
-            passportPermissionWrite = user.isPassportPermittedWrite;
+            secondNamePermissionRead = user.IsSecondNamePermittedRead;
+            secondNamePermissionWrite = user.IsSecondNamePermittedWrite;
+            firstNamePermissionRead = user.IsFirstNamePermittedRead;
+            firstNamePermissionWrite = user.IsFirstNamePermittedWrite;
+            patronymicPermissionRead = user.IsPatronymicPermittedRead;
+            patronymicPermissionWrite = user.IsPatronymicPermittedWrite;
+            phoneNumberPermissionRead = user.IsPhoneNumberPermittedRead;
+            phoneNumberPermissionWrite = user.IsPhoneNumberPermittedWrite;
+            passportPermissionRead = user.IsPassportPermittedRead;
+            passportPermissionWrite = user.IsPassportPermittedWrite;
         }
 
-        public void Edit(string secondName, string firstName, string patronymic, string phoneNumber, string passport, User user)
+        public void Edit(string secondName, string firstName, string patronymic, string phoneNumber, string passport, ref User user)
         {
-            Change(secondName, firstName, patronymic, phoneNumber, passport, user);
+            Change(secondName, firstName, patronymic, phoneNumber, passport, ref user);
             this.SecondName = secondName;
             this.FirstName = firstName;
             this.Patronymic = patronymic;
@@ -203,7 +203,7 @@ namespace Skillbox_Homework_11._1
             overrideFlag = boolValue;
         }
 
-        public void Change(string secondName, string firstName, string patronymic, string phoneNumber, string passport, User user)
+        public void Change(string secondName, string firstName, string patronymic, string phoneNumber, string passport, ref User user)
         {
             ClearChangeProps();
 

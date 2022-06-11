@@ -22,10 +22,11 @@ namespace Skillbox_Homework_11._1
         public MainWindow()
         {
             InitializeComponent();
-            Data.GetPermissions(user);
+            Data.GetPermissions(ref user);
             listView.ItemsSource = visibleDatabase;
             textBlock.Text = "Вход не выполнен";
             addEditDialog.buttonAccept.Click += new RoutedEventHandler(ButtonAccept);
+            this.Closed += new EventHandler(Shutdown);
         }
 
         private void ButtonSave(object sender, RoutedEventArgs e)
@@ -63,9 +64,9 @@ namespace Skillbox_Homework_11._1
                     string foo = File.ReadAllText(dialog.FileName);
                     database.Clear();
 
-                    var json = JsonConvert.DeserializeObject<ObservableCollection<Data>>(foo);
-
                     Data.OverridePetrmissions(true);
+
+                    var json = JsonConvert.DeserializeObject<ObservableCollection<Data>>(foo);
 
                     foreach (dynamic item in json)
                     {
@@ -121,10 +122,17 @@ namespace Skillbox_Homework_11._1
         {
             if (user.GetType() == typeof(Manager))
             {
-                database.Remove(database[listView.SelectedIndex]);
-                statusBar.Text = "Запись удалена";
+                if (listView.SelectedItem != null)
+                {
+                    database.Remove(database[listView.SelectedIndex]);
+                    statusBar.Text = "Запись удалена";
 
-                VisibleInformation();
+                    VisibleInformation();
+                }
+                else
+                {
+                    statusBar.Text = "Выберите пункт для удаления";
+                }
             }
             else
             {
@@ -147,6 +155,31 @@ namespace Skillbox_Homework_11._1
                 addEditDialog.textboxPhoneNumber.Text = selected.PhoneNumber;
                 addEditDialog.textboxPassport.Text = selected.Passport;
 
+                if (user.IsSecondNamePermittedWrite == false)
+                {
+                    addEditDialog.textboxSecondName.IsEnabled = false;
+                }
+
+                if (user.IsFirstNamePermittedWrite == false)
+                {
+                    addEditDialog.textboxFirstName.IsEnabled = false;
+                }
+
+                if (user.IsPatronymicPermittedWrite == false)
+                {
+                    addEditDialog.textboxPatronymic.IsEnabled = false;
+                }
+
+                if (user.IsPhoneNumberPermittedWrite == false)
+                {
+                    addEditDialog.textboxPhoneNumber.IsEnabled = false;
+                }
+
+                if (user.IsPassportPermittedWrite == false)
+                {
+                    addEditDialog.textboxPassport.IsEnabled = false;
+                }
+
                 addEditDialog.Show();
             }
             else
@@ -168,7 +201,7 @@ namespace Skillbox_Homework_11._1
             {
                 textBlock.Text = "Менеджер";
                 user = new Manager();
-                Data.GetPermissions(user);
+                Data.GetPermissions(ref user);
                 statusBar.Text = "Вход выполнен как <Менеджер>";
             }
 
@@ -176,7 +209,7 @@ namespace Skillbox_Homework_11._1
             {
                 textBlock.Text = "Консультант";
                 user = new Advisor();
-                Data.GetPermissions(user);
+                Data.GetPermissions(ref user);
                 statusBar.Text = "Вход выполнен как <Консультант>";
             }
 
@@ -184,8 +217,9 @@ namespace Skillbox_Homework_11._1
             {
                 textBlock.Text = "Вход не выполнен";
                 user = new Undefined();
-                Data.GetPermissions(user);
+                Data.GetPermissions(ref user);
                 statusBar.Text = "Выполнен выход";
+                database.Clear();
             }
 
             VisibleInformation();
@@ -255,12 +289,17 @@ namespace Skillbox_Homework_11._1
                                                       addEditDialog.textboxFirstName.Text,
                                                       addEditDialog.textboxPatronymic.Text,
                                                       addEditDialog.textboxPhoneNumber.Text,
-                                                      addEditDialog.textboxPassport.Text, user);
+                                                      addEditDialog.textboxPassport.Text, ref user);
             }
 
             VisibleInformation();
             addEditDialog.Hide();
             statusBar.Text = text;
+        }
+
+        private void Shutdown(object sender, EventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }

@@ -8,6 +8,6 @@ namespace Skillbox_Homework_11._1
 {
     interface IChangeInfo
     {
-        public void Change(string secondName, string firstName, string patronymic, string phoneNumber, string passport, User user);   
+        public abstract void Change(string secondName, string firstName, string patronymic, string phoneNumber, string passport, ref User user);
     }
 }
