@@ -59,7 +59,7 @@ namespace Skillbox_Homework_13._1 {
             
             #line default
             #line hidden
-            System.Uri resourceLocater = new System.Uri("/Skillbox Homework 13.1;component/app.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Skillbox Homework 13.1;V1.0.0.0;component/app.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\App.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

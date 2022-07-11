@@ -77,7 +77,7 @@ namespace Skillbox_Homework_13._1 {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Skillbox Homework 13.1;component/addclientdialog.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Skillbox Homework 13.1;V1.0.0.0;component/addclientdialog.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\AddClientDialog.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
