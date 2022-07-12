@@ -12,6 +12,7 @@ namespace Skillbox_Homework_13._1
         public string SecondName { get; set; }
         public string FirstName { get; set; }
         public string Patronymic { get; set; }
+        public string Bublik { get; set; }
 
         public static ObservableCollection<Client> clients = new ObservableCollection<Client> { };
 
